@@ -7,10 +7,163 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBackground"
     tools:context="com.example.sao.modclothesproject.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+
+                android:layout_width="140dp"
+                android:layout_height="130dp"
+                android:text="Closet"
+                android:id="@+id/ibtnCloset"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+
+                android:layout_width="140dp"
+                android:layout_height="190dp"
+                android:text="Calendar"
+                android:id="@+id/ibtnCalendar"
+                android:layout_below="@+id/ibtnCloset"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+
+                android:layout_width="140dp"
+                android:layout_height="220dp"
+                android:text="Collection"
+                android:id="@+id/btnCollection"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+
+                android:layout_width="140dp"
+                android:layout_height="220dp"
+                android:text="WomenStyle"
+                android:id="@+id/btnWomenStyle"
+                android:layout_below="@+id/btnCollection"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:layout_width="140dp"
+                android:layout_height="135dp"
+                android:id="@+id/imageButton2"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/ibtnCalendar"
+                android:layout_below="@+id/btnWS"
+                android:layout_alignBottom="@+id/btnWomenStyle" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:id="@+id/imageView2"
+                android:layout_alignTop="@+id/ibtnCloset"
+                android:background="@mipmap/clothes_hanger"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp" />
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                android:id="@+id/imageView3"
+                android:layout_alignTop="@+id/ibtnCalendar"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/collection" />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="110dp"
+                android:id="@+id/imageView4"
+                android:layout_alignBottom="@+id/btnCollection"
+                android:layout_marginLeft="176dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@mipmap/collection"
+                android:layout_below="@+id/btnCT" />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageView5"
+                android:layout_marginLeft="176dp"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/collection"
+                android:layout_below="@+id/btnC" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="Help"
+                android:id="@+id/imageView6"
+                android:layout_marginStart="10dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageView8"
+                android:background="@mipmap/information_symbol"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="45dp"
+                android:layout_below="@+id/ibtnCalendar" />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:text="Women Style"
+                android:id="@+id/btnWS"
+                android:layout_alignBottom="@+id/ibtnCalendar" />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:text="Closet"
+                android:id="@+id/btnCS"
+                android:layout_alignBottom="@+id/ibtnCloset" />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:text="Collection"
+                android:id="@+id/btnCT"
+                android:layout_alignTop="@+id/btnCollection"
+                android:layout_alignStart="@+id/btnCollection"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:id="@+id/btnA"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignEnd="@+id/ibtnCalendar" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendar"
+                android:id="@+id/btnC"
+                android:layout_alignTop="@+id/btnWomenStyle"
+                android:layout_alignStart="@+id/btnWomenStyle"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 </RelativeLayout>
