@@ -5,11 +5,15 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
+
 public class ViewImage extends AppCompatActivity {
-    TextView text;
+
     ImageView imageview;
 
     @Override
@@ -29,10 +33,10 @@ public class ViewImage extends AppCompatActivity {
         String[] filename = i.getStringArrayExtra("filename");
 
         // Locate the TextView in view_image.xml
-        text = (TextView) findViewById(R.id.imagetext);
+        //text = (TextView) findViewById(R.id.imagetext);
 
         // Load the text into the TextView followed by the position
-        text.setText(filename[position]);
+        //text.setText(filename[position]);
 
         // Locate the ImageView in view_image.xml
         imageview = (ImageView) findViewById(R.id.full_image_view);
@@ -42,5 +46,6 @@ public class ViewImage extends AppCompatActivity {
 
         // Set the decoded bitmap into ImageView
         imageview.setImageBitmap(bmp);
+
     }
 }

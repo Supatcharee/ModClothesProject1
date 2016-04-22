@@ -5,5 +5,35 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Camera</string>
+
+    <string name="space"> </string>
+    <string name="title_activity_pare_shape">PareShapeActivity</string>
+    <string name="pare_shape1">สำหรับสาวๆ ที่มีรูปร่างแบบลูกแพร์ คือสาวๆ ที่มีช่วงล่างใหญ่กว่าช่วงบน ช่วงไหล่จะแคบ ตัวเล็ก แขนเล็ก แต่บริเวณสะโพก ต้นขา และก้นจะใหญ่กว่าช่วงบนมากๆ</string>
+    <string name="pare_shape2">การแต่งตัวของสาวที่มีรูปร่างแบบลูกแพร์คือต้องพยายามบาลานซ์ช่วงสะโพกให้เท่าๆ กับช่วงไหล่ แต่ในขณะเดียวกันก็ต้องแต่งตัวให้มองเห็นส่วนเว้าส่วนโค้งของรูปร่างด้วย</string>
+    <string name="Do">Do</string>
+    <string name="detail_pear_1">- เพิ่มดีเทลในการแต่งตัวด้วยผ้าพันคอ เพราะการใส่ผ้าพันคอจะทำให้รูปร่างด้านบนที่ดูเล็ก และแคบ ดูบาลานซ์กับส่วนสะโพกด้านล่าง</string>
+    <string name="detail_pear_2">- สวมเสื้อแบบเปิดไหล่ เพราะจะช่วยเน้นส่วนบนของ ร่างกายและยังช่วยดึงสายตาจากบริเวณสะโพก</string>
+    <string name="detail_pear_3">- สวมเสื้อสีสันสดใส เพราะจะทำให้ช่วงบนดูใหญ่ขึ้น ในทางกลับกัน ถ้าใส่เสื้อสีเข้ม จะยิ่งทำให้ช่วงบนดูเล็กและแคบมากขึ้นไป</string>
+    <string name="rectangle_shape">PareShapeActivity</string>
+    <string name="title_activity_apple_shape">AppleShapeActivity</string>
+    <string name="apple_shape1">สาวๆที่มีรูปร่างทรงแอปเปิ้ล คือสาวๆ ตัวกลม หรือเรียกว่าสาวๆที่ไม่มีเอว หน้าอกใหญ่ เอวหนา และสะโพกใหญ่</string>
+    <string name="apple_shape2">การแต่งตัวของสาวที่มีรูปร่างทรงแอปเปิ้ลคือต้องมั่นใจ ถ้ามั่นใจ ใส่อะไรก็สวย แต่ขึ้นอยู่กับคำว่าพอดีและต้องดูความเหมาะสม</string>
+    <string name="detail_apple_1">- ใส่กระโปรงสั้น เพราะจะทำให้สาวๆ ดูชิคและดูคล่องตัวมากขึ้น</string>
+    <string name="detail_apple_2">- กระโปรงที่เหมาะ คือกระโปรงทรงเอ เพราะจะช่วยทำใหดูมีรูปร่างที่เพรียวมากขึ้น</string>
+    <string name="detail_apple_3">- สาวที่ชื่นชอบการใส่คาร์ดิแกน ควรเลือกใส่คาร์ดิแกนตัวยาว แบบคลุมสะโพก เพราะจะได้ช่วยพรางบริเวณสะโพกและต้นขาได้</string>
+    <string name="detail_apple_4">- เลือกไอเท็มชิ้นโปรดเป็นสีเข้มๆ เช่น ดำ เทา น้ำตาล กรมท่า จะได้ช่วยพรางรูปร่างได้</string>
+    <string name="title_activity_hourglass_shape">HourglassShapeActivity</string>
+    <string name="hourglass_shape1">สาวๆที่มีเอวคอดและมีสัดส่วนระหว่างหน้าอกกับสะโพกเท่าๆกัน เรียกว่าหุ่นทรงนาฬิกาทราย</string>
+    <string name="detail_hourglass_1">- ใส่รองเท้าส้นสูง เพราะจะช่วยทำให้ดูเพรียวขึ้น</string>
+    <string name="detail_hourglass_2">- สวมใส่เสื้อผ้าที่มีสีสันสดใส เพื่อช่วยเน้นเรื่องรูปร่าง</string>
+    <string name="detail_hourglass_3">- สำหรับสาวๆไซส์มินิ แนะนำให้สาวๆ ใส่เสื้อผ้าลายทางยาว เพื่อช่วยเพิ่มความสูงและช่วยทำให้รูปร่างดูเพรียวมากขึ้น</string>
+    <string name="title_activity_rectangle">RectangleActivity</string>
+    <string name="rectangle_shape1">สาวๆ ที่มีหุ่นแบบสี่เหลี่ยม คือ มีช่วงไหล่เท่ากับช่วงสะโพก และอกเล็ก</string>
+    <string name="detail_rectangle_1">- ถ้าอยากดูมีส่วนเว้าส่วนโค้งหรืออยากดูเป็นผู้หญิงมากขึ้นลองเลือกใส่เดรสที่มียางยืดรัดใต้อก จะช่วยให้สาวๆ ดูมีหน้าอกมากขึ้น</string>
+    <string name="detail_rectangle_2">- สำหรับสาวอกไข่ดาวและอยากลองใส่เดรส แนะนำให้เลือกเดรสที่มีระบายๆ จะดูน่ารักและช่วยเพิ่ม Curve ให้กับรูปร่าง</string>
+    <string name="detail_rectangle_3">- เลือกใส่เสื้อคอวี เพราะคอวีจะช่วยทำให้ดูมีหน้าอกเพิ่มขึ้น</string>
+    <string name="title_activity_collection">CollectionActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
 </resources>

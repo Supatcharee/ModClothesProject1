@@ -1,10 +1,14 @@
 package com.example.sao.modclothesproject;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
+import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -29,9 +33,12 @@ import android.widget.GridView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ClosetActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private static final int TAKE_PICTURE = 100;
 
     private String[] FilePathStrings;
     private String[] FileNameStrings;
@@ -138,7 +145,27 @@ public class ClosetActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+
+
+// location found
+                        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                        //Intent imageIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+                        File imagesFolder = new File(Environment.getExternalStorageDirectory(), "MOD Images");
+
+                        imagesFolder.mkdirs();
+
+                        Log.e("sao_project_2_test","" + imagesFolder.exists());
+
+                        File image = new File(imagesFolder, "Im_" + timeStamp + ".png");
+
+                        Uri uriSavedImage = Uri.fromFile(image);
+
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+                        startActivityForResult(intent, TAKE_PICTURE);
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -153,6 +180,7 @@ public class ClosetActivity extends AppCompatActivity
         if (id == R.id.nav_shirts) {
             // Handle the camera action
 
+
             // Check for SD Card
             if (!Environment.getExternalStorageState().equals(
                     Environment.MEDIA_MOUNTED)) {
@@ -161,7 +189,7 @@ public class ClosetActivity extends AppCompatActivity
             } else {
                 // Locate the image folder in your SD Card
                 file = new File(Environment.getExternalStorageDirectory()
-                        + File.separator + "MOD Images");
+                        + File.separator + "Shirts");
                 // Create a new folder if no folder named SDImageTutorial exist
                 file.mkdirs();
             }
@@ -208,19 +236,290 @@ public class ClosetActivity extends AppCompatActivity
             });
 
         } else if (id == R.id.nav_pants) {
+            // Check for SD Card
+            if (!Environment.getExternalStorageState().equals(
+                    Environment.MEDIA_MOUNTED)) {
+                Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
+                        .show();
+            } else {
+                // Locate the image folder in your SD Card
+                file = new File(Environment.getExternalStorageDirectory()
+                        + File.separator + "Pants");
+                // Create a new folder if no folder named SDImageTutorial exist
+                file.mkdirs();
+            }
+
+            if (file.isDirectory()) {
+                listFile = file.listFiles();
+                // Create a String array for FilePathStrings
+                FilePathStrings = new String[listFile.length];
+                // Create a String array for FileNameStrings
+                FileNameStrings = new String[listFile.length];
+
+                for (int i = 0; i < listFile.length; i++) {
+                    // Get the path of the image file
+                    FilePathStrings[i] = listFile[i].getAbsolutePath();
+                    // Get the name image file
+                    FileNameStrings[i] = listFile[i].getName();
+                }
+            }
+
+            // Locate the GridView in gridview_main.xml
+            grid = (GridView) findViewById(R.id.gridView);
+            // Pass String arrays to LazyAdapter Class
+            adapter = new GridViewAdapter(this, FilePathStrings, FileNameStrings);
+            // Set the LazyAdapter to the GridView
+            grid.setAdapter(adapter);
+
+            // Capture gridview item click
+            grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    Intent i = new Intent(ClosetActivity.this, ViewImage.class);
+                    // Pass String arrays FilePathStrings
+                    i.putExtra("filepath", FilePathStrings);
+                    // Pass String arrays FileNameStrings
+                    i.putExtra("filename", FileNameStrings);
+                    // Pass click position
+                    i.putExtra("position", position);
+                    startActivity(i);
+                }
+
+            });
 
         } else if (id == R.id.nav_skirts) {
+            // Check for SD Card
+            if (!Environment.getExternalStorageState().equals(
+                    Environment.MEDIA_MOUNTED)) {
+                Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
+                        .show();
+            } else {
+                // Locate the image folder in your SD Card
+                file = new File(Environment.getExternalStorageDirectory()
+                        + File.separator + "Skirts");
+                // Create a new folder if no folder named SDImageTutorial exist
+                file.mkdirs();
+            }
+
+            if (file.isDirectory()) {
+                listFile = file.listFiles();
+                // Create a String array for FilePathStrings
+                FilePathStrings = new String[listFile.length];
+                // Create a String array for FileNameStrings
+                FileNameStrings = new String[listFile.length];
+
+                for (int i = 0; i < listFile.length; i++) {
+                    // Get the path of the image file
+                    FilePathStrings[i] = listFile[i].getAbsolutePath();
+                    // Get the name image file
+                    FileNameStrings[i] = listFile[i].getName();
+                }
+            }
+
+            // Locate the GridView in gridview_main.xml
+            grid = (GridView) findViewById(R.id.gridView);
+            // Pass String arrays to LazyAdapter Class
+            adapter = new GridViewAdapter(this, FilePathStrings, FileNameStrings);
+            // Set the LazyAdapter to the GridView
+            grid.setAdapter(adapter);
+
+            // Capture gridview item click
+            grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    Intent i = new Intent(ClosetActivity.this, ViewImage.class);
+                    // Pass String arrays FilePathStrings
+                    i.putExtra("filepath", FilePathStrings);
+                    // Pass String arrays FileNameStrings
+                    i.putExtra("filename", FileNameStrings);
+                    // Pass click position
+                    i.putExtra("position", position);
+                    startActivity(i);
+                }
+
+            });
 
         } else if (id == R.id.nav_dress) {
+            // Check for SD Card
+            if (!Environment.getExternalStorageState().equals(
+                    Environment.MEDIA_MOUNTED)) {
+                Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
+                        .show();
+            } else {
+                // Locate the image folder in your SD Card
+                file = new File(Environment.getExternalStorageDirectory()
+                        + File.separator + "Dress");
+                // Create a new folder if no folder named SDImageTutorial exist
+                file.mkdirs();
+            }
+
+            if (file.isDirectory()) {
+                listFile = file.listFiles();
+                // Create a String array for FilePathStrings
+                FilePathStrings = new String[listFile.length];
+                // Create a String array for FileNameStrings
+                FileNameStrings = new String[listFile.length];
+
+                for (int i = 0; i < listFile.length; i++) {
+                    // Get the path of the image file
+                    FilePathStrings[i] = listFile[i].getAbsolutePath();
+                    // Get the name image file
+                    FileNameStrings[i] = listFile[i].getName();
+                }
+            }
+
+            // Locate the GridView in gridview_main.xml
+            grid = (GridView) findViewById(R.id.gridView);
+            // Pass String arrays to LazyAdapter Class
+            adapter = new GridViewAdapter(this, FilePathStrings, FileNameStrings);
+            // Set the LazyAdapter to the GridView
+            grid.setAdapter(adapter);
+
+            // Capture gridview item click
+            grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    Intent i = new Intent(ClosetActivity.this, ViewImage.class);
+                    // Pass String arrays FilePathStrings
+                    i.putExtra("filepath", FilePathStrings);
+                    // Pass String arrays FileNameStrings
+                    i.putExtra("filename", FileNameStrings);
+                    // Pass click position
+                    i.putExtra("position", position);
+                    startActivity(i);
+                }
+
+            });
 
         } else if (id == R.id.nav_shoes) {
+            // Check for SD Card
+            if (!Environment.getExternalStorageState().equals(
+                    Environment.MEDIA_MOUNTED)) {
+                Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
+                        .show();
+            } else {
+                // Locate the image folder in your SD Card
+                file = new File(Environment.getExternalStorageDirectory()
+                        + File.separator + "Shoes");
+                // Create a new folder if no folder named SDImageTutorial exist
+                file.mkdirs();
+            }
+
+            if (file.isDirectory()) {
+                listFile = file.listFiles();
+                // Create a String array for FilePathStrings
+                FilePathStrings = new String[listFile.length];
+                // Create a String array for FileNameStrings
+                FileNameStrings = new String[listFile.length];
+
+                for (int i = 0; i < listFile.length; i++) {
+                    // Get the path of the image file
+                    FilePathStrings[i] = listFile[i].getAbsolutePath();
+                    // Get the name image file
+                    FileNameStrings[i] = listFile[i].getName();
+                }
+            }
+
+            // Locate the GridView in gridview_main.xml
+            grid = (GridView) findViewById(R.id.gridView);
+            // Pass String arrays to LazyAdapter Class
+            adapter = new GridViewAdapter(this, FilePathStrings, FileNameStrings);
+            // Set the LazyAdapter to the GridView
+            grid.setAdapter(adapter);
+
+            // Capture gridview item click
+            grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    Intent i = new Intent(ClosetActivity.this, ViewImage.class);
+                    // Pass String arrays FilePathStrings
+                    i.putExtra("filepath", FilePathStrings);
+                    // Pass String arrays FileNameStrings
+                    i.putExtra("filename", FileNameStrings);
+                    // Pass click position
+                    i.putExtra("position", position);
+                    startActivity(i);
+                }
+
+            });
 
         } else if (id == R.id.nav_cessories) {
+            // Check for SD Card
+            if (!Environment.getExternalStorageState().equals(
+                    Environment.MEDIA_MOUNTED)) {
+                Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
+                        .show();
+            } else {
+                // Locate the image folder in your SD Card
+                file = new File(Environment.getExternalStorageDirectory()
+                        + File.separator + "Accessories");
+                // Create a new folder if no folder named SDImageTutorial exist
+                file.mkdirs();
+            }
 
+            if (file.isDirectory()) {
+                listFile = file.listFiles();
+                // Create a String array for FilePathStrings
+                FilePathStrings = new String[listFile.length];
+                // Create a String array for FileNameStrings
+                FileNameStrings = new String[listFile.length];
+
+                for (int i = 0; i < listFile.length; i++) {
+                    // Get the path of the image file
+                    FilePathStrings[i] = listFile[i].getAbsolutePath();
+                    // Get the name image file
+                    FileNameStrings[i] = listFile[i].getName();
+                }
+            }
+
+            // Locate the GridView in gridview_main.xml
+            grid = (GridView) findViewById(R.id.gridView);
+            // Pass String arrays to LazyAdapter Class
+            adapter = new GridViewAdapter(this, FilePathStrings, FileNameStrings);
+            // Set the LazyAdapter to the GridView
+            grid.setAdapter(adapter);
+
+            // Capture gridview item click
+            grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    Intent i = new Intent(ClosetActivity.this, ViewImage.class);
+                    // Pass String arrays FilePathStrings
+                    i.putExtra("filepath", FilePathStrings);
+                    // Pass String arrays FileNameStrings
+                    i.putExtra("filename", FileNameStrings);
+                    // Pass click position
+                    i.putExtra("position", position);
+                    startActivity(i);
+                }
+
+            });
+
+        }
+
+        else if(id == R.id.nav_share){
+            Toast.makeText(ClosetActivity.this, "Your Message", Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+
     }
 }

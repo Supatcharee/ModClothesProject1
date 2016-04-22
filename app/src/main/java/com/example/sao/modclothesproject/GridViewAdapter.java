@@ -54,13 +54,13 @@ public class GridViewAdapter extends BaseAdapter {
         ImageView image = (ImageView) vi.findViewById(R.id.image);
 
         // Set file name to the TextView followed by the position
-        text.setText(filename[position]);
+        //text.setText(filename[position]);
 
         // Decode the filepath with BitmapFactory followed by the position
         Bitmap bmp = BitmapFactory.decodeFile(filepath[position]);
 
         //Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, 230, 230, true);
-        bmp = Bitmap.createScaledBitmap(bmp,140,140,false);
+        bmp = Bitmap.createScaledBitmap(bmp,140,160,false);
 
         // Set the decoded bitmap into ImageView
         image.setImageBitmap(bmp);
