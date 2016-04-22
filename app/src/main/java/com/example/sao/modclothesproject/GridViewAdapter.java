@@ -60,7 +60,7 @@ public class GridViewAdapter extends BaseAdapter {
         Bitmap bmp = BitmapFactory.decodeFile(filepath[position]);
 
         //Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, 230, 230, true);
-        bmp = Bitmap.createScaledBitmap(bmp,140,160,false);
+        bmp = Bitmap.createScaledBitmap(bmp,150,180,false);
 
         // Set the decoded bitmap into ImageView
         image.setImageBitmap(bmp);

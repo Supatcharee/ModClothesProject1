@@ -146,29 +146,28 @@ public class ClosetActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-
 // location found
-                        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-                        //Intent imageIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+                //Intent imageIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-                        File imagesFolder = new File(Environment.getExternalStorageDirectory(), "MOD Images");
+                File imagesFolder = new File(Environment.getExternalStorageDirectory(), "Shirts");
 
-                        imagesFolder.mkdirs();
+                imagesFolder.mkdirs();
 
-                        Log.e("sao_project_2_test","" + imagesFolder.exists());
+                Log.e("sao_project_2_test", "" + imagesFolder.exists());
 
-                        File image = new File(imagesFolder, "Im_" + timeStamp + ".png");
+                File image = new File(imagesFolder, "Im_" + timeStamp + ".png");
 
-                        Uri uriSavedImage = Uri.fromFile(image);
+                Uri uriSavedImage = Uri.fromFile(image);
 
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
-                        startActivityForResult(intent, TAKE_PICTURE);
-
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+                startActivityForResult(intent, TAKE_PICTURE);
         }
 
         return super.onOptionsItemSelected(item);
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
