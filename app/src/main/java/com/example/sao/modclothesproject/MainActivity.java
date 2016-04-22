@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnCollection=(Button)findViewById(R.id.btnCT);
+        /*Button btnCollection=(Button)findViewById(R.id.btnCT);
         btnCollection.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -78,6 +78,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(MainActivity.this, CollectionActivity.class);
+                startActivity(intent);
+            }
+        });*/
+
+        Button btnWomenStyle=(Button)findViewById(R.id.btnWS);
+        btnWomenStyle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(MainActivity.this, WomanStyleActivity.class);
                 startActivity(intent);
             }
         });

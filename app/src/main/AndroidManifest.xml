@@ -33,7 +33,6 @@
         <activity android:name=".AppleShapeActivity" />
         <activity android:name=".HourglassShapeActivity" />
         <activity android:name=".RectangleActivity" />
-        <activity android:name=".CollectionActivity" />
         <activity android:name=".CreateCollectionActivity"></activity>
     </application>
 
