@@ -36,4 +36,6 @@
     <string name="title_activity_collection">CollectionActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
+    <string name="facebook_app_id">1735769100000225</string>
+
 </resources>
