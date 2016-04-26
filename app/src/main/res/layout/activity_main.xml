@@ -11,8 +11,6 @@
     tools:context="com.example.sao.modclothesproject.MainActivity">
 
 
-
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -159,6 +157,7 @@
                 android:layout_alignTop="@+id/btnWomenStyle"
                 android:layout_alignStart="@+id/btnWomenStyle"
                 android:layout_alignParentEnd="true" />
+
         <RelativeLayout
             android:layout_width="140dp"
             android:layout_height="300dp">
