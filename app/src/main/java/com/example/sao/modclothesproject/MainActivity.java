@@ -51,18 +51,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*Button btnCollection=(Button)findViewById(R.id.btnCT);
+        Button btnCollection=(Button)findViewById(R.id.btnCT);
         btnCollection.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(MainActivity.this, CollectionActivity.class);
+                Intent intent = new Intent(MainActivity.this, MainsActivity.class);
                 startActivity(intent);
             }
         });
 
-        ImageView imageView2 = (ImageView) findViewById(R.id.imageView4);
+       /* ImageView imageView2 = (ImageView) findViewById(R.id.imageView4);
         imageView2.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        Button btnWomenStyle=(Button)findViewById(R.id.btnWS);
+        Button btnWomenStyle=(Button)findViewById(R.id.btnC);
         btnWomenStyle.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -95,18 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageView imageView1 = (ImageView) findViewById(R.id.imageView3);
-        imageView1.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                // TODO Auto-generated method stub
-                Intent intent = new Intent(MainActivity.this, WomanStyleActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ImageButton imageButton1 = (ImageButton)findViewById(R.id.ibtnCalendar);
+        ImageButton imageButton1 = (ImageButton)findViewById(R.id.btnWomenStyle);
         imageButton1.setOnClickListener(new View.OnClickListener() {
 
             @Override

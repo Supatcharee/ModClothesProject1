@@ -3,6 +3,8 @@ package com.example.sao.modclothesproject;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,12 +13,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ViewImage extends AppCompatActivity {
-
+    private static final int TAKE_PICTURE = 100;
     ImageView imageview;
     TextView text;
 
@@ -71,5 +81,87 @@ public class ViewImage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        /*Button btnEdit = (Button) findViewById(R.id.btnEdit);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                //Intent imageIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+                File imagesFolder = new File(Environment.getExternalStorageDirectory(), "MOD Images");
+
+                imagesFolder.mkdirs();
+
+                Log.e("sao_project_2_test", "" + imagesFolder.exists());
+
+                File image = new File(imagesFolder, "Im_" + timeStamp + ".png");
+
+                Uri uriSavedImage = Uri.fromFile(image);
+
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+                startActivityForResult(intent, TAKE_PICTURE);
+
+
+            }
+        });*/
+
+        Button btnHome = (Button) findViewById(R.id.btnEdit);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewImage.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Button btnCancel = (Button) findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewImage.this, ClosetActivity.class);
+                startActivity(intent);
+
+            }
+        });
+       /* Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                LinearLayout llAttendeeList = (LinearLayout) findViewById(R.id.linear);
+                llAttendeeList.setDrawingCacheEnabled(true);
+                Bitmap bitmap = llAttendeeList.getDrawingCache();
+                File file, f = null;
+                if (android.os.Environment.getExternalStorageState().equals(
+                        android.os.Environment.MEDIA_MOUNTED)) {
+                    file = new File(
+                            android.os.Environment.getExternalStorageDirectory(),
+                            "myfolder");
+                    if (!file.exists()) {
+                        file.mkdirs();
+
+                    }
+                    f = new File(file.getAbsolutePath() + file.separator + "filename"
+                            + ".png");
+                }
+                FileOutputStream ostream = null;
+                try {
+                    ostream = new FileOutputStream(f);
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                }
+                bitmap.compress(Bitmap.CompressFormat.PNG, 10, ostream);
+                try {
+                    ostream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });*/
+
+
+
     }
 }

@@ -7,5 +7,13 @@
     <color name="colorButtonMenu">#f5f5f5</color>
     <color name="colorSplashscreen">#000000</color>
 
+    <color name="today">#4b82ff</color>
+    <color name="greyed_out">#c7c7c7</color>
+
+    <color name="summer">#FF3399</color>
+    <color name="fall">#FF3399</color>
+    <color name="winter">#FF3399</color>
+    <color name="spring">#FF3399</color>
+
 
 </resources>

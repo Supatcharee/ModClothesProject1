@@ -3,7 +3,7 @@
     package="com.example.sao.modclothesproject">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
 
         <activity
             android:name=".SplashScreenActivity"
@@ -36,6 +38,21 @@
         <activity android:name=".AppleShapeActivity" />
         <activity android:name=".HourglassShapeActivity" />
         <activity android:name=".RectangleActivity" />
+        <activity android:name=".CollectionActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity
+            android:name=".CollectionsActivity"
+            android:label="@string/title_activity_collections"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PreviewActivity" />
+        <activity android:name=".CollectionViewActivity" />
+        <activity android:name=".AddFabActivity" />
+        <activity android:name=".InsertsMeasurementsActivity" />
+        <activity android:name=".SActivity" />
+        <activity android:name=".MActivity" />
+        <activity android:name=".LActivity" />
+        <activity android:name=".XLActivity" />
+        <activity android:name=".MainsActivity"></activity>
     </application>
 
 </manifest>

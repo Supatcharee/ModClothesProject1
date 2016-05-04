@@ -1,8 +1,5 @@
 package com.example.sao.modclothesproject;
 
-/**
- * Created by Sao on 4/21/2016.
- */
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,7 +11,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GridViewAdapter extends BaseAdapter {
+/**
+ * Created by Sao on 5/2/2016.
+ */
+public class GridViewAdapter1 extends BaseAdapter {
 
     // Declare variables
     private Activity activity;
@@ -24,7 +24,7 @@ public class GridViewAdapter extends BaseAdapter {
 
     private static LayoutInflater inflater = null;
 
-    public GridViewAdapter(Activity a, String[] fpath, String[] fname) {
+    public GridViewAdapter1(Activity a, String[] fpath, String[] fname) {
         activity = a;
         filepath = fpath;
         filename = fname;
@@ -61,7 +61,7 @@ public class GridViewAdapter extends BaseAdapter {
         Bitmap bmp = BitmapFactory.decodeFile(filepath[position]);
 
         //Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, 230, 230, true);
-        bmp = Bitmap.createScaledBitmap(bmp,150,180,false);
+        bmp = Bitmap.createScaledBitmap(bmp,80,80,false);
 
         // Set the decoded bitmap into ImageView
         image.setImageBitmap(bmp);

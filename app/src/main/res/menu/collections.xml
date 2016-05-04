@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/camera"
+
+    <!--<item
+        android:id="@+id/fab"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        android:icon="@drawable/ic_add_a_photo_black_24dp"
+        android:icon="@drawable/ic_star_black_24dp"
+        app:showAsAction="ifRoom" />-->
+
+    <item
+        android:id="@+id/add"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_add_circle_outline_black_24dp"
         app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/home"
         android:orderInCategory="100"
         android:title="@string/action_settings"
         android:icon="@drawable/ic_account_balance_black_24dp"
         app:showAsAction="ifRoom" />
+
+
 </menu>

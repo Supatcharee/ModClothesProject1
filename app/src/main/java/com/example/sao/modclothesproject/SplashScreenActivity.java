@@ -20,7 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Thread() {
             public void run() {
                 try{
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                     hRefresh.sendEmptyMessage(REFRESH_SCREEN);
                 }catch(Exception e){
                 }
