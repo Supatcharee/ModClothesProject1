@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,13 +43,22 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
         myRecyclerView.setLayoutManager(linearLayoutManager);
 
         prepareGallery();
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView4);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myRecyclerViewAdapter.clearAll();
+                prepareGallery();
+            }
+        });
     }
 
     private void prepareGallery(){
         String ExternalStorageDirectoryPath = Environment
                 .getExternalStorageDirectory()
                 .getAbsolutePath();
-        String targetPath = ExternalStorageDirectoryPath + "/MOD Images/";
+        String targetPath = ExternalStorageDirectoryPath + "/Collections/";
 
         Toast.makeText(getApplicationContext(), targetPath, Toast.LENGTH_LONG).show();
         File targetDirector = new File(targetPath);
