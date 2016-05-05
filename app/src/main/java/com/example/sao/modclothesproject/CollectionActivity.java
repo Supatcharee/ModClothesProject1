@@ -43,9 +43,7 @@ import java.util.Date;
 
 public class CollectionActivity extends AppCompatActivity  {
 
-    private RecyclerView myRecyclerView;
-    private MyRecyclerViewAdapter myRecyclerViewAdapter;
-    private LinearLayoutManager linearLayoutManager;
+
 
     TextView textInfo;
     ImageView imageView;

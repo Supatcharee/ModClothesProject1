@@ -52,7 +52,7 @@
         <activity android:name=".MActivity" />
         <activity android:name=".LActivity" />
         <activity android:name=".XLActivity" />
-        <activity android:name=".MainsActivity"></activity>
+        <activity android:name=".MaincActivity"></activity>
     </application>
 
 </manifest>

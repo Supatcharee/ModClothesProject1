@@ -48,7 +48,7 @@ public class CollectionsActivity extends AppCompatActivity {
         } else {
             // Locate the image folder in your SD Card
             file = new File(Environment.getExternalStorageDirectory()
-                    + File.separator + "myfolder");
+                    + File.separator + "MOD Images");
             // Create a new folder if no folder named SDImageTutorial exist
             file.mkdirs();
         }
@@ -137,7 +137,7 @@ public class CollectionsActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.add) {
-            Intent intent = new Intent(CollectionsActivity.this, CollectionActivity.class);
+            Intent intent = new Intent(CollectionsActivity.this, MaincActivity.class);
             startActivity(intent);
             return true;
         }

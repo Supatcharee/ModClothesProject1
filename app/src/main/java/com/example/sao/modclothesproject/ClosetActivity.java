@@ -152,7 +152,7 @@ public class ClosetActivity extends AppCompatActivity
                 //Intent imageIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-                File imagesFolder = new File(Environment.getExternalStorageDirectory(), "MOD Images");
+                File imagesFolder = new File(Environment.getExternalStorageDirectory(), "Dress");
 
                 imagesFolder.mkdirs();
 
@@ -183,19 +183,6 @@ public class ClosetActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-
-            setContentView(R.layout.activity_collection);
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.setDrawerListener(toggle);
-            toggle.syncState();
-
-            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-            navigationView.setNavigationItemSelectedListener(this);
 
             // Check for SD Card
             if (!Environment.getExternalStorageState().equals(

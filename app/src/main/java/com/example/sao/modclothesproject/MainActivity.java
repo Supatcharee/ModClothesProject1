@@ -12,6 +12,7 @@ import com.facebook.FacebookSdk;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(MainActivity.this, MainsActivity.class);
+                Intent intent = new Intent(MainActivity.this, CollectionsActivity.class);
                 startActivity(intent);
             }
         });
