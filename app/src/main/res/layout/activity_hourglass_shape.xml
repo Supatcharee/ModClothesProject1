@@ -27,7 +27,7 @@
                 android:layout_height="200dp"
                 android:id="@+id/imgvHourglass"
                 android:text="@string/pare_shape1"
-                android:background="@mipmap/glass"
+                android:background="@mipmap/hourglass"
                 android:layout_marginLeft="80dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />

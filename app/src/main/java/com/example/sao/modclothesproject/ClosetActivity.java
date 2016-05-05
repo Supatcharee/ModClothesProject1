@@ -23,16 +23,6 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 import java.io.File;
-import android.os.Bundle;
-import android.os.Environment;
-import android.app.Activity;
-import android.content.Intent;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
-import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -152,7 +142,7 @@ public class ClosetActivity extends AppCompatActivity
                 //Intent imageIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-                File imagesFolder = new File(Environment.getExternalStorageDirectory(), "Dress");
+                File imagesFolder = new File(Environment.getExternalStorageDirectory(), "Collections");
 
                 imagesFolder.mkdirs();
 

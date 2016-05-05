@@ -31,10 +31,10 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainc);
-        textInfo = (TextView)findViewById(R.id.info);
+        textInfo = (TextView) findViewById(R.id.info);
         textInfo.setMovementMethod(new ScrollingMovementMethod());
 
-        myRecyclerView = (RecyclerView)findViewById(R.id.myrecyclerview);
+        myRecyclerView = (RecyclerView) findViewById(R.id.myrecyclerview);
         linearLayoutManager =
                 new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         myRecyclerViewAdapter = new MyRecyclerViewAdapter(this, this);
@@ -44,16 +44,17 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
 
         prepareGallery();
 
-        ImageView imageView = (ImageView) findViewById(R.id.imageView4);
+        imageView = (ImageView) findViewById(R.id.imageView4);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 myRecyclerViewAdapter.clearAll();
                 prepareGallery();
+
             }
         });
-    }
 
+    }
     private void prepareGallery(){
         String ExternalStorageDirectoryPath = Environment
                 .getExternalStorageDirectory()
@@ -69,18 +70,61 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
             myRecyclerViewAdapter.add(
                     myRecyclerViewAdapter.getItemCount(),
                     uri);
+
         }
+    }
+
+    private void prepareGallery1(MyRecyclerViewAdapter.ItemHolder item){
+        Bitmap bmp;
+        imageView = (ImageView) findViewById(R.id.info1);
+        bmp = BitmapFactory.decodeFile(item.getItemUri());
+        bmp = Bitmap.createScaledBitmap(bmp, 130, 500, false);
+        imageView.setImageBitmap(bmp);
     }
 
     @Override
     public void onItemClick(MyRecyclerViewAdapter.ItemHolder item, int position) {
+        Bitmap bmp;
 
         String stringitemUri = item.getItemUri();
         Toast.makeText(MaincActivity.this, stringitemUri, Toast.LENGTH_SHORT).show();
 
-        imageView =(ImageView)findViewById(R.id.info1);
-        Bitmap bmp = BitmapFactory.decodeFile(item.getItemUri());
-        bmp = Bitmap.createScaledBitmap(bmp,130,500,false);
-        imageView.setImageBitmap(bmp);
+        String ExternalStorageDirectoryPath = Environment
+                .getExternalStorageDirectory()
+                .getAbsolutePath();
+        String targetPath = ExternalStorageDirectoryPath + "/Collections/";
+
+        Toast.makeText(getApplicationContext(), targetPath, Toast.LENGTH_LONG).show();
+        File targetDirector = new File(targetPath);
+
+        File[] files = targetDirector.listFiles();
+        for (File file : files){
+            Uri uri = Uri.fromFile(file);
+            myRecyclerViewAdapter.add(
+                    myRecyclerViewAdapter.getItemCount(),
+                    uri);
+            File[] dirs = file.listFiles();
+            String name = ExternalStorageDirectoryPath + "/Collections/";
+
+                for (File dir : dirs) {
+                    if (dir.isFile()) { // Check file or directory
+                        name = dir.getName().toLowerCase();
+                        // Add or delete extensions as needed
+                        imageView = (ImageView) findViewById(R.id.imageView4);
+                        bmp = BitmapFactory.decodeFile(item.getItemUri());
+                        bmp = Bitmap.createScaledBitmap(bmp, 130, 500, false);
+                        imageView.setImageBitmap(bmp);
+                        }
+                    }
+
+            }
+
+            if(fileList().equals(item.getItemUri())){
+            imageView = (ImageView) findViewById(R.id.info1);
+            bmp = BitmapFactory.decodeFile(item.getItemUri());
+            bmp = Bitmap.createScaledBitmap(bmp, 130, 500, false);
+            imageView.setImageBitmap(bmp);
+        }
+
     }
 }

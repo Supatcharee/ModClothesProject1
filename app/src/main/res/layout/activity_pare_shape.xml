@@ -26,7 +26,7 @@
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:id="@+id/imgvPear"
-                android:background="@mipmap/pare"
+                android:background="@mipmap/pear"
                 android:text="@string/pare_shape1"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
