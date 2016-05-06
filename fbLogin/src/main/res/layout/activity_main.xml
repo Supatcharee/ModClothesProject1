@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mehdi.sakout.custom_facebook_login_button.MainActivity">
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/facebook_login"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:fb_radius="2dp"
+        app:fb_iconPosition="left"
+        app:fb_fontIconSize="20sp"
+        app:fb_iconPaddingRight="10dp"
+        app:fb_textSize="16sp"
+        app:fb_text="Facebook Login"
+        app:fb_textColor="#ffffff"
+        app:fb_defaultColor="#39579B"
+        app:fb_focusColor="#6183d2"
+        app:fb_fontIconResource="&#xf230;"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Anonymous"
+        android:layout_below="@+id/facebook_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>
