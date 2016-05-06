@@ -10,44 +10,63 @@ package com.example.sao.modclothesproject;
         import android.widget.Toast;
 
 public class InsertsMeasurementsActivity extends AppCompatActivity {
-    EditText etFName;
-    EditText etLName;
+    EditText edtBust;
+    EditText edtWaist;
+    EditText edtHips;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inserts_measurements);
-        etFName = (EditText) findViewById(R.id.edtBust);
-        etLName = (EditText) findViewById(R.id.edtWaist);
 
-        Button button = (Button) findViewById(R.id.btnSubmit);
+        edtBust = (EditText) findViewById(R.id.edtBust);
+        edtWaist = (EditText) findViewById(R.id.edtWaist);
+        edtHips = (EditText) findViewById(R.id.edtHips);
+
+        /*Button button = (Button) findViewById(R.id.btnSubmit);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // TODO Auto-generated method stub
-                int b = Integer.parseInt(etLName.getText().toString());
-                if(b==34){
-                    Intent intent = new Intent(InsertsMeasurementsActivity.this, CollectionActivity.class);
+               int a = Integer.parseInt(edtBust.getText().toString());
+
+                int waist = Integer.parseInt(edtWaist.getText().toString());
+                int hips = Integer.parseInt(edtHips.getText().toString());
+                *//*if(a>40) {
+                    Intent intent = new Intent(InsertsMeasurementsActivity.this, MaincActivity.class);
                     startActivity(intent);
                 }
-                else if(b==36){
+                else if(a>37){
                     Intent intent = new Intent(InsertsMeasurementsActivity.this, MActivity.class);
                     startActivity(intent);
                 }
-                else if(b==38){
+                else if(a>34){
                     Intent intent = new Intent(InsertsMeasurementsActivity.this,LActivity.class);
                     startActivity(intent);
                 }
-                else if(b>=40){
+                else if((a>31)){
                     Intent intent = new Intent(InsertsMeasurementsActivity.this, XLActivity.class);
                     startActivity(intent);
-                }
+                }*//*
+                Intent intent = new Intent(InsertsMeasurementsActivity.this, MaincActivity.class);
+                startActivity(intent);*/
+/*
+        Intent intent = new Intent(InsertsMeasurementsActivity.this, MaincActivity.class);
+        startActivity(intent);*/
 
 
+Button button = (Button)findViewById(R.id.btnSubmit);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // TODO Auto-generated method stub
+
+                Intent intent = new Intent(InsertsMeasurementsActivity.this, MaincActivity.class);
+                startActivity(intent);
             }
         });
-
         Button button1 = (Button) findViewById(R.id.btnSkip);
         button1.setOnClickListener(new View.OnClickListener() {
 

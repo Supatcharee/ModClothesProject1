@@ -9,4 +9,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sao.modclothesproject.SActivity">
 
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/l">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="400dp"
+            android:background="@mipmap/body"
+            android:layout_marginTop="60dp"
+            android:id="@+id/imageView3" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@mipmap/cessories"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="140dp"
+            android:id="@+id/imageView4" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@mipmap/cessories"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="140dp"
+            android:id="@+id/imageView5" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@mipmap/cessories"
+            android:layout_marginTop="340dp"
+            android:layout_marginLeft="140dp"
+            android:id="@+id/imageView6" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:id="@+id/btnsave" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button6"
+        android:layout_marginLeft="100dp"
+        android:layout_gravity="center_horizontal" />
 </RelativeLayout>
+

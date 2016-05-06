@@ -29,7 +29,7 @@ public class CollectionsActivity extends AppCompatActivity {
     private String[] FileNameStrings;
     private File[] listFile;
     GridView grid;
-    GridViewAdapter adapter;
+    GridViewAdapter1 adapter;
     File file;
 
     @Override
@@ -48,7 +48,7 @@ public class CollectionsActivity extends AppCompatActivity {
         } else {
             // Locate the image folder in your SD Card
             file = new File(Environment.getExternalStorageDirectory()
-                    + File.separator + "MOD Images");
+                    + File.separator + "Collections");
             // Create a new folder if no folder named SDImageTutorial exist
             file.mkdirs();
         }
@@ -70,7 +70,7 @@ public class CollectionsActivity extends AppCompatActivity {
         // Locate the GridView in gridview_main.xml
         grid = (GridView) findViewById(R.id.gridView);
         // Pass String arrays to LazyAdapter Class
-        adapter = new GridViewAdapter(this, FilePathStrings, FileNameStrings);
+        adapter = new GridViewAdapter1(this, FilePathStrings, FileNameStrings);
         // Set the LazyAdapter to the GridView
         grid.setAdapter(adapter);
         beginActionMode(); // this might be used by a long press or by button tam in action bar...

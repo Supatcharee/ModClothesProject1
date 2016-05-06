@@ -28,7 +28,7 @@ import java.util.Date;
 
 public class ClosetActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private static final int TAKE_PICTURE = 100;
+    private static final int TAKE_PICTURE = 1;
 
     private String[] FilePathStrings;
     private String[] FileNameStrings;
@@ -171,7 +171,7 @@ public class ClosetActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        /*if (id == R.id.nav_home) {
             // Handle the camera action
 
             // Check for SD Card
@@ -228,7 +228,7 @@ public class ClosetActivity extends AppCompatActivity
 
             });
 
-        }else if (id == R.id.nav_shirts) {
+        }else*/ if (id == R.id.nav_shirts) {
             // Handle the camera action
 
             // Check for SD Card
@@ -286,8 +286,12 @@ public class ClosetActivity extends AppCompatActivity
             });
 
 
+                    Intent intent = new Intent(ClosetActivity.this, ShitsActivity.class);
+                    startActivity(intent);
+
+
         } else if (id == R.id.nav_pants) {
-            // Check for SD Card
+            /*// Check for SD Card
             if (!Environment.getExternalStorageState().equals(
                     Environment.MEDIA_MOUNTED)) {
                 Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
@@ -339,10 +343,13 @@ public class ClosetActivity extends AppCompatActivity
                     startActivity(i);
                 }
 
-            });
+            });*/
+
+            Intent intent = new Intent(ClosetActivity.this, PantsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_skirts) {
-            // Check for SD Card
+            /*// Check for SD Card
             if (!Environment.getExternalStorageState().equals(
                     Environment.MEDIA_MOUNTED)) {
                 Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
@@ -394,10 +401,14 @@ public class ClosetActivity extends AppCompatActivity
                     startActivity(i);
                 }
 
-            });
+            });*/
+
+            Intent intent = new Intent(ClosetActivity.this, SkirtsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_dress) {
-            // Check for SD Card
+
+            /*// Check for SD Card
             if (!Environment.getExternalStorageState().equals(
                     Environment.MEDIA_MOUNTED)) {
                 Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
@@ -450,9 +461,12 @@ public class ClosetActivity extends AppCompatActivity
                 }
 
             });
+*/
+            Intent intent = new Intent(ClosetActivity.this, DressActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_shoes) {
-            // Check for SD Card
+            /*// Check for SD Card
             if (!Environment.getExternalStorageState().equals(
                     Environment.MEDIA_MOUNTED)) {
                 Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
@@ -504,10 +518,13 @@ public class ClosetActivity extends AppCompatActivity
                     startActivity(i);
                 }
 
-            });
+            });*/
+
+            Intent intent = new Intent(ClosetActivity.this, ShoesActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_cessories) {
-            // Check for SD Card
+            /*// Check for SD Card
             if (!Environment.getExternalStorageState().equals(
                     Environment.MEDIA_MOUNTED)) {
                 Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
@@ -559,7 +576,10 @@ public class ClosetActivity extends AppCompatActivity
                     startActivity(i);
                 }
 
-            });
+            });*/
+
+            Intent intent = new Intent(ClosetActivity.this, AccessoriesActivity.class);
+            startActivity(intent);
 
         }
 

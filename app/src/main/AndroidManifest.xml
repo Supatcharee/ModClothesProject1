@@ -52,7 +52,13 @@
         <activity android:name=".MActivity" />
         <activity android:name=".LActivity" />
         <activity android:name=".XLActivity" />
-        <activity android:name=".MaincActivity"></activity>
+        <activity android:name=".MaincActivity" />
+        <activity android:name=".ShitsActivity" />
+        <activity android:name=".PantsActivity" />
+        <activity android:name=".SkirtsActivity" />
+        <activity android:name=".DressActivity" />
+        <activity android:name=".ShoesActivity" />
+        <activity android:name=".AccessoriesActivity"></activity>
     </application>
 
 </manifest>

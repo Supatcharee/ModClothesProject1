@@ -20,7 +20,7 @@ public class CollectionViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collection_view);
 
-        /*Intent i = getIntent();
+        Intent i = getIntent();
 
         // Get the position
         int position = i.getExtras().getInt("position");
@@ -62,11 +62,11 @@ public class CollectionViewActivity extends AppCompatActivity {
 
                 File file = new File(filepath[position]);
                 file.delete();
-                Intent intent = new Intent(CollectionViewActivity.this, CollectionsActivity.class);
+                Intent intent = new Intent(CollectionViewActivity.this, ClosetActivity.class);
                 startActivity(intent);
             }
         });
-        *//*Button btnEdit = (Button) findViewById(R.id.btnEdit);
+        /*Button btnEdit = (Button) findViewById(R.id.btnEdit);
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +90,7 @@ public class CollectionViewActivity extends AppCompatActivity {
 
 
             }
-        });*//*
+        });*/
 
         Button btnHome = (Button) findViewById(R.id.btnEdit);
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -106,12 +106,12 @@ public class CollectionViewActivity extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CollectionViewActivity.this, CollectionsActivity.class);
+                Intent intent = new Intent(CollectionViewActivity.this, ClosetActivity.class);
                 startActivity(intent);
 
             }
         });
-       *//* Button button5 = (Button) findViewById(R.id.button5);
+       /* Button button5 = (Button) findViewById(R.id.button5);
         button5.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 LinearLayout llAttendeeList = (LinearLayout) findViewById(R.id.linear);
@@ -144,9 +144,10 @@ public class CollectionViewActivity extends AppCompatActivity {
                 }
 
             }
-        });*//*
+        });*/
 
-*/
+
+
 
 
 
