@@ -16,33 +16,27 @@
         />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Delete"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/full_image_view"
         android:layout_width="fill_parent"
-        android:layout_height="350dp"
+        android:layout_height="420dp"
         android:layout_marginTop="5dp"
         />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Home"
-        android:id="@+id/btnEdit"
-        android:layout_alignBottom="@+id/button"
-        android:layout_toStartOf="@+id/button" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="Back"
         android:id="@+id/btnCancel"
-        android:layout_alignTop="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/full_image_view"
+        android:layout_alignEnd="@+id/full_image_view" />
 </RelativeLayout>

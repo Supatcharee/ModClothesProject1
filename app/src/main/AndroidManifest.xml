@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -58,7 +60,15 @@
         <activity android:name=".SkirtsActivity" />
         <activity android:name=".DressActivity" />
         <activity android:name=".ShoesActivity" />
-        <activity android:name=".AccessoriesActivity"></activity>
+        <activity android:name=".AccessoriesActivity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".SetTimeActivity" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:process=":remote" />
+
+        <activity android:name=".CalecndarActivity"></activity>
     </application>
 
 </manifest>

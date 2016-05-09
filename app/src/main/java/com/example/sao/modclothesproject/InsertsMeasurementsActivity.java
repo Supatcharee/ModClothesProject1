@@ -62,9 +62,25 @@ Button button = (Button)findViewById(R.id.btnSubmit);
             @Override
             public void onClick(View view) {
                 // TODO Auto-generated method stub
-
-                Intent intent = new Intent(InsertsMeasurementsActivity.this, MaincActivity.class);
-                startActivity(intent);
+                int a = Integer.parseInt(edtBust.getText().toString());
+                if((a>42)){
+                    Intent intent = new Intent(InsertsMeasurementsActivity.this, XLActivity.class);
+                    startActivity(intent);
+                }
+                else if((a>38)){
+                    Intent intent = new Intent(InsertsMeasurementsActivity.this, LActivity.class);
+                    startActivity(intent);
+                }
+                else if((a>34)){
+                    Intent intent = new Intent(InsertsMeasurementsActivity.this, MActivity.class);
+                    startActivity(intent);
+                }
+                else if((a>31)){
+                    Intent intent = new Intent(InsertsMeasurementsActivity.this, MaincActivity.class);
+                    startActivity(intent);
+                }
+                else {Intent intent = new Intent(InsertsMeasurementsActivity.this, MaincActivity.class);
+                    startActivity(intent);}
             }
         });
         Button button1 = (Button) findViewById(R.id.btnSkip);

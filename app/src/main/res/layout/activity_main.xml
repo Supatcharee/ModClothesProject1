@@ -23,8 +23,9 @@
                 android:layout_height="120dp"
                 android:text="Closet"
                 android:id="@+id/ibtnCloset"
-                android:background="@color/com_facebook_button_border_color_focused"
                 android:layout_alignParentTop="true"
+                android:backgroundTint="#a0ffffff"
+                android:background="@color/com_facebook_picker_search_bar_background"
                 android:layout_alignParentStart="true" />
 
             <ImageButton
@@ -35,6 +36,8 @@
                 android:id="@+id/ibtnCalendar"
                 android:layout_marginTop="7dp"
                 android:layout_below="@+id/ibtnCloset"
+                android:backgroundTint="#a0ffffff"
+                android:background="@color/com_facebook_picker_search_bar_background"
                 android:layout_alignParentStart="true" />
 
             <ImageButton
@@ -42,9 +45,10 @@
                 android:layout_width="140dp"
                 android:layout_height="220dp"
                 android:text="Collection"
-                android:background="@color/com_facebook_button_border_color_focused"
                 android:id="@+id/btnCollection"
                 android:layout_alignParentTop="true"
+                android:backgroundTint="#a0ffffff"
+                android:background="@color/com_facebook_picker_search_bar_background"
                 android:layout_alignParentEnd="true" />
 
             <ImageButton
@@ -54,7 +58,8 @@
                 android:text="Calendar"
                 android:id="@+id/btnWomenStyle"
                 android:layout_below="@+id/btnCollection"
-                android:background="@color/com_facebook_button_border_color_focused"
+                android:background="@color/com_facebook_picker_search_bar_background"
+                android:backgroundTint="#a0ffffff"
                 android:layout_alignParentEnd="true" />
 
             <ImageButton
@@ -62,10 +67,11 @@
                 android:layout_height="135dp"
                 android:id="@+id/imageButton2"
                 android:layout_marginTop="5dp"
-                android:background="@color/com_facebook_button_border_color_focused"
                 android:layout_alignParentStart="true"
                 android:layout_alignEnd="@+id/ibtnCalendar"
                 android:layout_below="@+id/btnWS"
+                android:background="@color/com_facebook_picker_search_bar_background"
+                android:backgroundTint="#a0ffffff"
                 android:layout_alignBottom="@+id/btnWomenStyle" />
 
             <ImageView
@@ -116,7 +122,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/imageView8"
                 android:background="@mipmap/information_symbol"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="45dp"
                 android:layout_below="@+id/ibtnCalendar" />
 
@@ -124,15 +130,16 @@
                 android:layout_width="140dp"
                 android:layout_height="40dp"
                 android:text="Calendar"
-                android:background="@color/com_facebook_button_border_color_focused"
                 android:id="@+id/btnWS"
+                android:backgroundTint="#a0ffffff"
+                android:background="@color/com_facebook_picker_search_bar_background"
                 android:layout_alignBottom="@+id/ibtnCalendar" />
 
             <Button
                 android:layout_width="141dp"
                 android:layout_height="81dp"
-                android:background="@color/com_facebook_button_border_color_focused"
                 android:id="@+id/btnWS1"
+                android:background="@color/com_facebook_picker_search_bar_background"
                 android:layout_marginTop="4dp"
                 android:backgroundTint="#05ffffff" />
 
@@ -142,15 +149,16 @@
                 android:layout_height="40dp"
                 android:text="Closet"
                 android:id="@+id/btnCS"
-                android:background="@color/com_facebook_button_border_color_focused"
+                android:background="@color/com_facebook_picker_search_bar_background"
+                android:backgroundTint="#a0ffffff"
                 android:layout_alignBottom="@+id/ibtnCloset" />
 
             <Button
                 android:layout_width="141dp"
                 android:layout_height="210dp"
                 android:layout_marginTop="130dp"
-                android:background="@color/com_facebook_button_border_color_focused"
                 android:id="@+id/btnCS1"
+                android:background="@color/com_facebook_picker_search_bar_background"
                 android:backgroundTint="#05ffffff" />
 
             <Button
@@ -158,7 +166,8 @@
                 android:layout_height="40dp"
                 android:text="Collection"
                 android:id="@+id/btnCT"
-                android:background="@color/com_facebook_button_border_color_focused"
+                android:background="@color/com_facebook_picker_search_bar_background"
+                android:backgroundTint="#a0ffffff"
                 android:layout_alignTop="@+id/btnCollection"
                 android:layout_alignStart="@+id/btnCollection"/>
 
@@ -167,7 +176,8 @@
                 android:layout_height="40dp"
                 android:text="About"
                 android:id="@+id/btnA"
-                android:background="@color/com_facebook_button_border_color_focused"
+                android:background="@color/com_facebook_picker_search_bar_background"
+                android:backgroundTint="#a0ffffff"
                 android:layout_alignBottom="@+id/imageButton2" />
 
             <Button
@@ -175,10 +185,12 @@
                 android:layout_height="40dp"
                 android:text="Women Style"
                 android:id="@+id/btnC"
+                android:background="@color/com_facebook_picker_search_bar_background"
+                android:backgroundTint="#a0ffffff"
                 android:layout_alignTop="@+id/btnWomenStyle"
-                android:background="@color/com_facebook_button_border_color_focused"
                 android:layout_alignStart="@+id/btnWomenStyle"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                 />
 
         <RelativeLayout
             android:layout_width="140dp"

@@ -122,7 +122,7 @@ public class ClosetActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.closet, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -134,7 +134,7 @@ public class ClosetActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.camera) {
+        /*if (id == R.id.camera) {
 
 // location found
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -154,7 +154,7 @@ public class ClosetActivity extends AppCompatActivity
 
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
                 startActivityForResult(intent, TAKE_PICTURE);
-        }
+        }*/
 
         if (id == R.id.home) {
             Intent i = new Intent(ClosetActivity.this, MainActivity.class);
@@ -231,7 +231,7 @@ public class ClosetActivity extends AppCompatActivity
         }else*/ if (id == R.id.nav_shirts) {
             // Handle the camera action
 
-            // Check for SD Card
+           /* // Check for SD Card
             if (!Environment.getExternalStorageState().equals(
                     Environment.MEDIA_MOUNTED)) {
                 Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
@@ -283,7 +283,7 @@ public class ClosetActivity extends AppCompatActivity
                     startActivity(i);
                 }
 
-            });
+            });*/
 
 
                     Intent intent = new Intent(ClosetActivity.this, ShitsActivity.class);
@@ -584,7 +584,8 @@ public class ClosetActivity extends AppCompatActivity
         }
 
         else if(id == R.id.nav_share){
-            Toast.makeText(ClosetActivity.this, "Your Message", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(ClosetActivity.this, Main2Activity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

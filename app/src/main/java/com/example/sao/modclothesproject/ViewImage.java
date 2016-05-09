@@ -107,7 +107,7 @@ public class ViewImage extends AppCompatActivity {
             }
         });*/
 
-        Button btnHome = (Button) findViewById(R.id.btnEdit);
+       /* Button btnHome = (Button) findViewById(R.id.btnEdit);
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,7 +115,7 @@ public class ViewImage extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+        });*/
 
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(new View.OnClickListener() {

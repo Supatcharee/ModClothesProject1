@@ -8,19 +8,17 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/DemoCamera" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/fbLogin" />
-            <option value="$PROJECT_DIR$/openCVLibrary310" />
+            <option value="$PROJECT_DIR$/facebook" />
+            <option value="$PROJECT_DIR$/library" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/DemoCamera" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/fbLogin" />
-            <option value="$PROJECT_DIR$/openCVLibrary310" />
+            <option value="$PROJECT_DIR$/facebook" />
+            <option value="$PROJECT_DIR$/library" />
           </set>
         </option>
       </GradleProjectSettings>

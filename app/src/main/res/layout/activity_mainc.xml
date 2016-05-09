@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorButtonMenu"
     tools:context="com.example.sao.modclothesproject.MaincActivity">
 
     <android.support.v7.widget.RecyclerView
@@ -30,9 +31,9 @@
         android:layout_alignParentEnd="true" />
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="275dp"
             android:layout_height="410dp"
-            android:background="@color/cardview_light_background"
+            android:background="@color/colorButtonMenu"
             android:id="@+id/relativeLayout">
 
             <ImageView
@@ -54,24 +55,25 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="#2222"
-                android:layout_marginLeft="140dp"
+                android:background="@mipmap/la"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="160dp"
                 android:id="@+id/imageView4" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="#CCC2"
-                android:layout_marginTop="150dp"
-                android:layout_marginLeft="140dp"
+                android:background="@mipmap/cessories"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="160dp"
                 android:id="@+id/imageView5" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="#A22"
+                android:background="@mipmap/shoes"
                 android:layout_marginTop="300dp"
-                android:layout_marginLeft="140dp"
+                android:layout_marginLeft="160dp"
                 android:id="@+id/imageView6" />
 
             <ImageView
@@ -86,6 +88,15 @@
 
 
         </RelativeLayout>
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/clock"
+        android:background="@drawable/ic_alarm_add_black_24dp"
+        android:layout_alignTop="@+id/relativeLayout"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:layout_toEndOf="@+id/relativeLayout" />
 </RelativeLayout>
 
 

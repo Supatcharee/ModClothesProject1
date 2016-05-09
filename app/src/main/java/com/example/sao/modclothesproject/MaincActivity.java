@@ -48,6 +48,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
 
     TextView textInfo;
     ImageView imageView;
+    Button b;
 
 
     Button button;
@@ -70,6 +71,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
         myRecyclerViewAdapter.setOnItemClickListener(this);
         myRecyclerView.setAdapter(myRecyclerViewAdapter);
         myRecyclerView.setLayoutManager(linearLayoutManager);
+        prepareGalleryinfo();
 
         imageView = (ImageView) findViewById(R.id.imageView4);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +108,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
                 prepareGalleryimage6();
             }
         });
+
 
         /*btnSaveAll.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -161,6 +164,14 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
                 }
             }
         });*/
+        b = (Button) findViewById(R.id.clock);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MaincActivity.this, SetTimeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void save(){
@@ -193,7 +204,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
         String ExternalStorageDirectoryPath = Environment
                 .getExternalStorageDirectory()
                 .getAbsolutePath();
-        String targetPath = ExternalStorageDirectoryPath + "/Dress/";
+        String targetPath = ExternalStorageDirectoryPath + "/Collections/";
 
         Toast.makeText(getApplicationContext(), targetPath, Toast.LENGTH_LONG).show();
         File targetDirector = new File(targetPath);
@@ -285,6 +296,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
         String word5 = "Pa";
         String word6 = "Shoes";
         String word7 = "Shirts";
+        String word8 = "Co";
 
         boolean b = word1.contains(word2);
 
@@ -295,7 +307,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
             bmp = Bitmap.createScaledBitmap(bmp, 130, 500, false);
             imageView.setImageBitmap(bmp);
         }
-        else if(word1.contains(word4)){
+        else if(word1.contains(word8)){
             imageView = (ImageView) findViewById(R.id.info1);
             bmp = BitmapFactory.decodeFile(item.getItemUri());
             bmp = Bitmap.createScaledBitmap(bmp, 130, 500, false);
@@ -307,7 +319,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
 
             imageView = (ImageView) findViewById(R.id.imageView4);
             bmp = BitmapFactory.decodeFile(item.getItemUri());
-            bmp = Bitmap.createScaledBitmap(bmp, 130, 500, false);
+            bmp = Bitmap.createScaledBitmap(bmp, 500, 500, false);
             imageView.setImageBitmap(bmp);
         }
 
@@ -315,7 +327,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
 
             imageView = (ImageView) findViewById(R.id.imageView6);
             bmp = BitmapFactory.decodeFile(item.getItemUri());
-            bmp = Bitmap.createScaledBitmap(bmp, 130, 500, false);
+            bmp = Bitmap.createScaledBitmap(bmp, 500, 500, false);
             imageView.setImageBitmap(bmp);
         }
 
@@ -347,7 +359,7 @@ public class MaincActivity extends AppCompatActivity implements MyRecyclerViewAd
 
         if (id == R.id.save) {
             save();
-            Intent i = new Intent(MaincActivity.this, CollectionsActivity.class);
+            Intent i = new Intent(MaincActivity.this, CalecndarActivity.class);
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);
