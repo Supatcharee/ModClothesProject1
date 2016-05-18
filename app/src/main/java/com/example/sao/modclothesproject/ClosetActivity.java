@@ -584,8 +584,8 @@ public class ClosetActivity extends AppCompatActivity
         }
 
         else if(id == R.id.nav_share){
-            Intent intent = new Intent(ClosetActivity.this, Main2Activity.class);
-            startActivity(intent);
+            /*Intent intent = new Intent(ClosetActivity.this, Main2Activity.class);
+            startActivity(intent);*/
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

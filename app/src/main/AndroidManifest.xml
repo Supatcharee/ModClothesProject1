@@ -61,14 +61,13 @@
         <activity android:name=".DressActivity" />
         <activity android:name=".ShoesActivity" />
         <activity android:name=".AccessoriesActivity" />
-        <activity android:name=".Main2Activity" />
         <activity android:name=".SetTimeActivity" />
 
         <receiver
             android:name=".AlarmReceiver"
             android:process=":remote" />
 
-        <activity android:name=".CalecndarActivity"></activity>
+        <activity android:name=".CalecndarActivity" />
     </application>
 
 </manifest>

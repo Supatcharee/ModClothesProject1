@@ -188,8 +188,7 @@
                 android:background="@color/com_facebook_picker_search_bar_background"
                 android:backgroundTint="#a0ffffff"
                 android:layout_alignTop="@+id/btnWomenStyle"
-                android:layout_alignStart="@+id/btnWomenStyle"
-                android:layout_alignParentEnd="true"
+
                  />
 
         <RelativeLayout
@@ -212,18 +211,7 @@
                     android:id="@+id/datePicker"
                     android:scrollIndicators="none" />
 
-                <!--<ImageButton
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:id="@+id/imageButton"
-                    android:background="@color/com_facebook_button_border_color_focused"
-                    android:layout_centerHorizontal="true"
-                    android:backgroundTint="#00ffffff"
-                    android:layout_alignParentTop="true" />-->
-
-
-
-            </RelativeLayout>/
+            </RelativeLayout>
             </ScrollView>
         </RelativeLayout>
 
